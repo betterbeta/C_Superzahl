@@ -81,6 +81,7 @@
     <ClCompile Include="Add.c" />
     <ClCompile Include="Compare.c" />
     <ClCompile Include="Copy.c" />
+    <ClCompile Include="GetSZahl.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="SetNull.c" />
   </ItemGroup>

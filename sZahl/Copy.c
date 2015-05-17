@@ -1,6 +1,7 @@
 #include "Header.h"
 #include <stdio.h>
 void copy(){
+	/*
 	printf("Kopiere den Wert von y nach x\n");
 			for(i=0;i<Superzahl.length2;i++)
 				Superzahl.Eingabevektor1[(strlen(Buffer1)-2)-i]=0;
@@ -19,4 +20,5 @@ void copy(){
 
 		printf(" \t Zahl y\n");
 		printf("----------------------------------------------------\n");
-		}
+		*/
+}

@@ -3,11 +3,11 @@
 #include <string.h>
 #include <stdlib.h>
 
-typedef struct
-{
-	int number[51];
-}sZahl;
 
+
+//--------------------------------------------------
+//					OLD
+//
 struct S_Zahl // Deklaration einer Struktur
 {
 	int Eingabevektor1[51];
@@ -19,63 +19,39 @@ struct S_Zahl // Deklaration einer Struktur
 	int AddVektor[51];
 	int *zahl;
 }Superzahl;
+//
+//					OLD END
+//--------------------------------------------------
 
 void Berechnung(){
 	unsigned int i;
-	int j,k;
+	int j = 0;
+	int k = 0;
 
-	char Buffer[51];
+	sZahl number1;
+	sZahl number2;
+	sZahl solution;
+
+	char buffer[51];
 
 	char Buffer1[50];	//OLD
 	char Buffer2[50];	//OLD
 
 
-	k=0;
-	j=0;
+
+	// Opening, get Numbers from User
 	printf("Rechnen mit grossen Zahlen\n");
 	printf("Ganze Zahl x eingeben:");
-	fgets(Buffer1,50,stdin);
+	// get max 50 chars.
+	fgets(buffer, 50, stdin);
 
-	Superzahl.length1 = 0;
-	for(i=0;i<(strlen(Buffer1));i++)
-	{
-		j=i-k;
-		switch(Buffer1[(strlen(Buffer1)-1)-i])
-		{
-		case '0': Superzahl.Eingabevektor1[50-j] = 0;
-			Superzahl.length1++;
-			break;
-		case '1': Superzahl.Eingabevektor1[50-j] = 1;
-			Superzahl.length1++;
-			break;
-		case '2': Superzahl.Eingabevektor1[50-j] = 2;
-			Superzahl.length1++;
-			break;
-		case '3': Superzahl.Eingabevektor1[50-j] = 3;
-			Superzahl.length1++;
-			break;
-		case '4': Superzahl.Eingabevektor1[50-j] = 4;
-			Superzahl.length1++;
-			break;
-		case '5': Superzahl.Eingabevektor1[50-j] = 5;
-			Superzahl.length1++;
-			break;
-		case '6': Superzahl.Eingabevektor1[50-j] = 6;
-			Superzahl.length1++;
-			break;
-		case '7': Superzahl.Eingabevektor1[50-j] = 7;
-			Superzahl.length1++;
-			break;
-		case '8': Superzahl.Eingabevektor1[50-j] = 8;
-			Superzahl.length1++;
-			break;
-		case '9': Superzahl.Eingabevektor1[50-j] = 9;
-			Superzahl.length1++;
-			break;
-		default: k++;
-			break;
-		}
-	}
+
+
+
+
+
+
+
 
 
 
@@ -226,7 +202,7 @@ void Nullsetzen(){
 			printf(" \t Zahl y\n");
 	printf("----------------------------------------------------\n");
 }
-
+/*
 void Vergleich(char Buffer1[50],char Buffer2[50]){
 	unsigned int i=0;
 
@@ -266,7 +242,7 @@ void Vergleich(char Buffer1[50],char Buffer2[50]){
 			}
 		printf("----------------------------------------------------\n");
 }
-
+*/
 void XundYvertauschen(){
 
 	int i=0,j=0;

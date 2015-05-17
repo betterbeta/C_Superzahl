@@ -15,6 +15,27 @@
 
 
 int main(){
+	// Generate 3 sZahl's
+	sZahl number1;
+	sZahl number2;
+	sZahl solution;
+	
+	printf(HELLO_L1);
+	printf("\n");
+	printf(HELLO_L2);
+	printf("\n");
+	printf(HELLO_L3);
+	printf("\n");
+	printf(HELLO_L4);
+	printf("\n");
+
+	// Ask User for the numbers
+	getSZahl(&number1, GETSZAHL_1);
+	getSZahl(&number2, GETSZAHL_1);
+	
+
+
+	/*
 	char Buffer1[50];
 	char Buffer2[50];
 
@@ -22,7 +43,7 @@ int main(){
 	Vergleich(Buffer1, Buffer2);
 	XundYvertauschen();
 	Nullsetzen();
-
+	*/
 
 	return 0;
 }

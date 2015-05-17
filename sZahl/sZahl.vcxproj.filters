@@ -30,6 +30,9 @@
     <ClCompile Include="SetNull.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="GetSZahl.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h">
