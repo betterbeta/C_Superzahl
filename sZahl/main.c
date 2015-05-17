@@ -1,25 +1,28 @@
 /****************************************************************************/
-/* Name			: Praktikum 2 Programmieren 2 (Große Zahlen)
+/* Name			: Praktikum 2-3 Programmieren 2 (Große Zahlen)
 /* Autor		: Kevin Luczak & Jannes Müller
 /* Created		: 03.02.2015
 /* Description	: main function
-/* Version		: 1.20
+/* Version		: 1.50
 /* Changes		:
 /*		[03.02.2015 - V1.00] Created by Kevin Luczak & Jannes Müller
 /*		[17.05.2015 - V1.20] Completly Restructed by F.Friederich
 /*		[17.05.2015 - V1.30] Framework, redefine and copyxy functs added
-/*							 by F.Friederich
+/*							 by FF
+/*		[17.05.2015	- V1.50] Multiplication and exponentation added by FF
 /****************************************************************************/
 
 #define _CRT_SECURE_NO_WARNINGS
 #include "sZahl.h"
+#include "getValue.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <conio.h>
 
 void redefine(sZahl *super);
-void copyxy(sZahl *super1, sZahl *super2);
+void copyxy(sZahl *x, sZahl *y, sZahl *s);
+void exponate(sZahl *x, sZahl *y);
 
 int main(){
 	unsigned exit = 0;
@@ -52,6 +55,8 @@ int main(){
 		printf(LOOP_L3_COPY "\n");
 		printf(LOOP_L4_COMPARE "\n");
 		printf(LOOP_L5_ADDXY "\n");
+		printf(LOOP_L6_MULTIXY "\n");
+		printf(LOOP_L7_EXP "\n");
 		printf(PRINTNOW "\n");
 		printf("x = ");
 		printSNumber(&number1);
@@ -71,7 +76,7 @@ int main(){
 			redefine(&number2);
 			break;
 		case '3': system("cls");
-			copyxy(&number1, &number2);
+			copyxy(&number1, &number2, &solution);
 			break;
 		case '4': // Compare
 			switch(compare(&number1, &number2))
@@ -90,8 +95,14 @@ int main(){
 			}
 			_getch();
 			break;
-		case '5': system("cls");
+		case '5': // add
 			addSZahl(&number1, &number2, &solution);
+			break;
+		case '6': // multi
+			multiSZahl(&number1, &number2, &solution);
+			break;
+		case '7': // exponate
+			exponate(&number1, &number2);
 			break;
 		case '0': exit = 1;
 			break;
@@ -126,7 +137,7 @@ void redefine(sZahl *super)
 			exit = 1;
 			break;
 		case '2': // Set Null
-			setNull;
+			setNull(super);
 			exit = 1;
 			break;
 		case '0': exit = 1;
@@ -139,7 +150,7 @@ void redefine(sZahl *super)
 	return;
 }
 
-void copyxy(sZahl *super1, sZahl *super2)
+void copyxy(sZahl *x, sZahl *y, sZahl *s)
 {
 	int i = 0;
 	int exit = 0;
@@ -152,16 +163,66 @@ void copyxy(sZahl *super1, sZahl *super2)
 		printf(LOOP_L0_BACK "\n");
 		printf(COPY_L1_XY "\n");
 		printf(COPY_L2_YX "\n");
+		printf(COPY_L3_XS "\n");
+		printf(COPY_L4_YS "\n");
 
 		i = _getch();
 		switch (i)
 		{
 		case '1': // X to Y
-			copy(super1, super2);
+			copy(x, y);
 			exit = 1;
 			break;
 		case '2': // Y to X
-			copy(super2, super1);
+			copy(y, x);
+			exit = 1;
+			break;
+		case '3': // X to S
+			copy(x, s);
+			exit = 1;
+			break;
+		case '4': // Y to S
+			copy(y, s);
+			exit = 1;
+			break;
+		case '0': exit = 1;
+			break;
+		default: break;
+		}
+	}
+}
+
+void exponate(sZahl *x, sZahl *y)
+{
+	int i = 0;
+	int exp = 0;
+	int exit = 0;
+
+	sZahl buffer;
+	setNull(&buffer);
+
+	// do as long as exit is 0
+	while (exit == 0)
+	{
+		system("cls");
+		printf(EXP_CHOICE "\n");
+		printf(LOOP_L0_BACK "\n");
+		printf(EXP_X "\n");
+		printf(EXP_Y "\n");
+
+		i = _getch();
+		switch (i)
+		{
+		case '1': // X
+			exp = getInt(EXP_EXP, 1, 10000, 1);
+			expSZahl(x, exp, &buffer);
+			copy(&buffer, x);
+			exit = 1;
+			break;
+		case '2': // Y
+			exp = getInt(EXP_EXP, 1, 10000, 1);
+			expSZahl(y, exp, &buffer);
+			copy(&buffer, y);
 			exit = 1;
 			break;
 		case '0': exit = 1;

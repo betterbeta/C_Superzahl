@@ -18,12 +18,18 @@
     <ClCompile Include="main.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="stdSZahl.c">
+    <ClCompile Include="getValue.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="sZahl.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sZahl.h">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
+    <ClInclude Include="getValue.h">
       <Filter>Quelldateien</Filter>
     </ClInclude>
   </ItemGroup>
