@@ -1,4 +1,4 @@
-#include "Header.h"	
+#include "sZahl.h"	
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

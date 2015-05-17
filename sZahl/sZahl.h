@@ -19,10 +19,9 @@ typedef struct
 }sZahl;
 
 void getSZahl(sZahl *number, char text[]);
-
-
-void Berechnung();
-
-void Vergleich(char Buffer1[50],char Buffer2[50]);
-void XundYvertauschen();
+void setNull(sZahl *number);
+void addSZahl(sZahl *number1, sZahl *number2, sZahl *solution);
+void copy(sZahl *in, sZahl *out);
+void switchSZahl(sZahl *number1, sZahl *number2);
+unsigned compare(sZahl *number1, sZahl *number2);
 #endif /*#ifndef FUNCTIONS_SZAHL_TOOLS_BY_F_FRIEDERICH_INCLUDED*/

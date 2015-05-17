@@ -78,15 +78,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Add.c" />
-    <ClCompile Include="Compare.c" />
-    <ClCompile Include="Copy.c" />
-    <ClCompile Include="GetSZahl.c" />
+    <ClCompile Include="stdSZahl.c" />
     <ClCompile Include="main.c" />
-    <ClCompile Include="SetNull.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h" />
+    <ClInclude Include="sZahl.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

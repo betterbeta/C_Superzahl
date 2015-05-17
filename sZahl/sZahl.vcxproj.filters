@@ -18,24 +18,12 @@
     <ClCompile Include="main.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Add.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Compare.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Copy.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SetNull.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="GetSZahl.c">
+    <ClCompile Include="stdSZahl.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h">
+    <ClInclude Include="sZahl.h">
       <Filter>Quelldateien</Filter>
     </ClInclude>
   </ItemGroup>

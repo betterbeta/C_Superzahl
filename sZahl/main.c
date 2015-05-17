@@ -7,7 +7,7 @@
 /****************************************************************************/
 
 #define _CRT_SECURE_NO_WARNINGS
-#include "Header.h"
+#include "sZahl.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -33,17 +33,5 @@ int main(){
 	getSZahl(&number1, GETSZAHL_1);
 	getSZahl(&number2, GETSZAHL_1);
 	
-
-
-	/*
-	char Buffer1[50];
-	char Buffer2[50];
-
-	Berechnung();
-	Vergleich(Buffer1, Buffer2);
-	XundYvertauschen();
-	Nullsetzen();
-	*/
-
 	return 0;
 }
