@@ -4,9 +4,11 @@
 /* Created		: 17.05.2015
 /* Description	: getter for sZahl
 /*				  set Null for sZahl
-/* Version		: 1.00
+/* Version		: 1.11
 /* Changes		:
 /*		[17.05.2015 - V1.00] Created by Frank Friederich
+/*		[17.05.2015 - V1.10] printSNumber added by FF
+/*		[17.05.2015 - V1.11] just little bugfix by FF
 /****************************************************************************/
 
 #include "sZahl.h"
@@ -15,9 +17,9 @@
 
 void getSZahl(sZahl *number, char text[])
 {
-	int i = 0;
-	int k = 0;
-	int j = 0;
+	unsigned i = 0;
+	unsigned k = 0;
+	unsigned j = 0;
 
 	char buffer[51];
 
@@ -75,7 +77,8 @@ void getSZahl(sZahl *number, char text[])
 }
 
 // (re-)set sZahl to null
-void setNull(sZahl *number){
+void setNull(sZahl *number)
+{
 	// reset length
 	number->length = 0;
 
@@ -87,6 +90,22 @@ void setNull(sZahl *number){
 	
 	return;
 }
+
+void printSNumber(sZahl *number)
+{
+	unsigned i = 0;
+	unsigned startPoint = 51-number->length;
+	if (startPoint == 51)
+		startPoint = 50;
+
+	for (size_t i = startPoint ; i < 51; i++)
+	{
+		printf("%d", number->number[i]);
+	}
+	return;
+}
+
+
 
 // solution = number1 + number2
 void addSZahl(sZahl *number1, sZahl *number2, sZahl *solution)
