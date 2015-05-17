@@ -1,9 +1,12 @@
 /****************************************************************************/
-/* Dateiname   : Praktikum 2 Programmieren 2 (Große Zahlen)                 */
-/* Autor       : Kevin Luczak & Jannes Müller                               */
-/* Erstellt am : 03.02.2015                                                 */
-/* Version     : 1.00                                                       */
-/* Beschreibung: Praktikum 15.05.2015 Programmieren 2                       */
+/* Name			: Praktikum 2 Programmieren 2 (Große Zahlen)
+/* Autor		: Kevin Luczak & Jannes Müller
+/* Created		: 03.02.2015
+/* Description	: main function
+/* Version		: 1.20
+/* Changes		:
+/*		[03.02.2015 - V1.00] Created by Kevin Luczak & Jannes Müller
+/*		[17.05.2015 - V1.20] Completly Restructed by F.Friederich
 /****************************************************************************/
 
 #define _CRT_SECURE_NO_WARNINGS

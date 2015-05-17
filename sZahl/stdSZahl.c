@@ -2,9 +2,11 @@
 /* Name			: Praktikum 2 Programmieren 2 (Groﬂe Zahlen)
 /* Autor		: Frank Friederich
 /* Created		: 17.05.2015
-/* Version		: 1.00
 /* Description	: getter for sZahl
 /*				  set Null for sZahl
+/* Version		: 1.00
+/* Changes		:
+/*		[17.05.2015 - V1.00] Created by Frank Friederich
 /****************************************************************************/
 
 #include "sZahl.h"
