@@ -3,7 +3,7 @@
 /* Autor		: Frank Friederich
 /* Created		: 17.05.2015
 /* Description	: standard functions for type sZahl
-/* Version		: 1.20
+/* Version		: 1.25
 /* Changes		:
 /*		[17.05.2015 - V1.00] Created by Frank Friederich
 /*		[17.05.2015 - V1.10] printSNumber added by FF
@@ -11,6 +11,7 @@
 /*		[17.05.2015	- V1.20] Multiplication, 
 /*							 setLength and exponentiate
 /*							 added by FF
+/*		[18.05.2015	- V1.25] Compare bug fixxed
 /****************************************************************************/
 
 #include "sZahl.h"
@@ -150,6 +151,8 @@ unsigned compare(sZahl *number1, sZahl *number2)
 				solution = 1;
 			else
 				solution = 2;
+
+			break;
 		}
 	}
 
